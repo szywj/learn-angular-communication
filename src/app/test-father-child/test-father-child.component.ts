@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ChildComponent } from './child/child.component'
 
 @Component({
   selector: 'test-father-child',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test-father-child.component.scss']
 })
 export class TestFatherChildComponent implements OnInit {
+  @ViewChild(ChildComponent)
+  private childComponent: ChildComponent;
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  doSth() {
+    this.childComponent.childFn1();
+    alert("Father heard child!");
   }
 
 }

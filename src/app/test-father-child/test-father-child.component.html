@@ -1,3 +1,7 @@
-<p>
-  test-father-child works!
-</p>
+<div class="panel panel-primary">
+  <div class="panel-heading">I. Communication b/w father and child</div>
+  <div class="panel-body">
+    <child #child (follow)="doSth()" panelTitle="Set child component's title."></child>
+    <button class="btn btn-success" (click)="child.childFn()">Click to set child component's title!</button>
+  </div>
+</div>
