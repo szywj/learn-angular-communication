@@ -22,7 +22,7 @@ export class ChildComponent implements OnInit {
   public follow = new EventEmitter<string>();
 
   public emitAnEvent(): void {
-    return this.follow.emit("follow");
+    return this.follow.emit("follow1");
   }
 
   constructor() { 
